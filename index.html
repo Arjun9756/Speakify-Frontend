@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speakify - YouTube Downloader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Speakify</h1>
+            <p>Download YouTube Videos & Audio</p>
+        </div>
+        
+        <div class="input-section">
+            <form id="downloadForm">
+                <div class="url-input-container">
+                    <input type="url" id="youtubeUrl" placeholder="Paste YouTube URL here..." required>
+                    <button type="submit">Process</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="download-options" id="downloadOptions">
+            <div class="option audio-option" id="audioOption">
+                <div class="option-content">
+                    <i class="icon audio-icon"></i>
+                    <h3>Audio</h3>
+                    <p>Download MP3</p>
+                    <button class="download-btn" data-type="audio">Download Audio</button>
+                </div>
+                <div class="loader" id="audioLoader">
+                    <div class="spinner"></div>
+                    <p>Processing audio...</p>
+                </div>
+            </div>
+
+            <div class="option video-option" id="videoOptionLow">
+                <div class="option-content">
+                    <i class="icon video-icon"></i>
+                    <h3>Video (Low Quality)</h3>
+                    <p>Smaller file size</p>
+                    <button class="download-btn" data-type="video" data-quality="0">Download Video</button>
+                </div>
+                <div class="loader" id="videoLoaderLow">
+                    <div class="spinner"></div>
+                    <p>Processing video...</p>
+                </div>
+            </div>
+
+            <div class="option video-option" id="videoOptionHigh">
+                <div class="option-content">
+                    <i class="icon video-icon"></i>
+                    <h3>Video (High Quality)</h3>
+                    <p>Best quality available</p>
+                    <button class="download-btn" data-type="video" data-quality="1">Download Video</button>
+                </div>
+                <div class="loader" id="videoLoaderHigh">
+                    <div class="spinner"></div>
+                    <p>Processing video...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
