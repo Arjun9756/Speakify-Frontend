@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (quality !== undefined) {
             formData.append('quality', quality);
         }
-
+        // Demo
         try {
             const response = await fetch(apiUrl, {
                 method: 'POST',
